@@ -2,7 +2,7 @@
 
 # Basic installation. Required for the rest, below.
 apt update
-apt install apt-transport-https ca-certificates curl git gnupg lsb-release
+apt install apt-transport-https ca-certificates curl git
 
 # Python install.
 apt install python3-pip
