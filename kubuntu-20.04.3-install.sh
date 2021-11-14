@@ -5,7 +5,7 @@ apt update
 apt install apt-transport-https ca-certificates cmake curl git
 
 # Python install.
-apt install python3-pip python3-tk python3-pil.imagetk torch torchvision scipy matplotlib
+apt install python3-pip python3-tk python3-pil.imagetk scipy matplotlib
 
 # Cuda install
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
@@ -31,6 +31,8 @@ rm -f packages.microsoft.gpg
 sudo apt update
 sudo apt install code
 
+# Machine learning stuff
+pip3 install --pre torch torchvision torchaudio -f https://download.pytorch.org/whl/nightly/cu113/torch_nightly.html
 
 # Docker install.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
