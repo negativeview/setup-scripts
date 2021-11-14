@@ -5,7 +5,7 @@ apt update
 apt install apt-transport-https ca-certificates cmake curl git
 
 # Python install.
-apt install python3-pip python3-tk python3-pil.imagetk torch torchvision
+apt install python3-pip python3-tk python3-pil.imagetk torch torchvision scipy
 
 # Cuda install
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
