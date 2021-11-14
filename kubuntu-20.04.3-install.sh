@@ -16,6 +16,14 @@ apt-key add /var/cuda-repo-ubuntu2004-11-5-local/7fa2af80.pub
 apt update
 apt install cuda
 
+# Vulkan
+apt install libx11-dev libxcb1-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev
+git clone --recurse-submodules https://github.com/KhronosGroup/Vulkan-Samples.git
+cd Vulkan-Samples
+cmake -G "Unix Makefiles" -H. -Bbuild/linux -DCMAKE_BUILD_TYPE=Release
+cmake --build build/linux --config Release --target vulkan_samples -- -j4
+
+
 # Docker install.
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo \
